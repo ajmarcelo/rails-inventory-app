@@ -1,0 +1,5 @@
+es:
+  hello: "Hola mundo"
+  items:
+    index:
+      title: "Elementos"
