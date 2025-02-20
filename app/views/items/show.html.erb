@@ -5,6 +5,8 @@
     <%= @item.description %>
 <% end %>
 
+<%= render "inventory", item: @item %>
+
 <%= link_to "Back", items_path %>
 <% if authenticated? %>
     <%= link_to "Edit", edit_item_path(@item) %>
