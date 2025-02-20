@@ -23,11 +23,11 @@ class ItemsController < ApplicationController
 			render :new, status: :unprocessable_entity
 		end
 	end
-	
+
 	# Edit Item
 	def edit
 	end
-	
+
 	def update
 		if @item.update(item_params)
 			redirect_to @item
