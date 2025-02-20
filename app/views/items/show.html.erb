@@ -1,0 +1,12 @@
+<% cache @item do %>
+    <%= image_tag @item.featured_image if @item.featured_image.attached? %>
+
+    <h1><%= @item.name %></h1>
+    <%= @item.description %>
+<% end %>
+
+<%= link_to "Back", items_path %>
+<% if authenticated? %>
+    <%= link_to "Edit", edit_item_path(@item) %>
+    <%= button_to "Delete", @item, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
+<% end %>
